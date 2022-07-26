@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+        </style>
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/6034b1f543.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        @media only screen and (max-width: 620px) {
+
+            .menu,
+            .main,
+            .right {
+                width: 100%;
+            }
+        }
+        .main-div{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .side-menu {
+            text-align: center;
+            border: 1px solid black;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            position: fixed;
+            top: 100px;
+            right: 0px;
+            height: 275px;
+            width: 75px;
+            font-size: 14px;
+            background-color: rgb(13, 19, 38);
+            color: gray;
+            z-index: 999;
+        }
+
+        .side-menu p {
+            line-height: 130%;
+            margin: 20px 0 20px 0;
+
+        }
+
+        .side-menu p:hover {
+            color: white;
+            cursor: pointer;
+        }
+
+        .heading h1 {
+            padding: 100px 0px 0px 0px;
+            letter-spacing: 1px;
+        }
+
+        .heading {
+            /* border: 1px solid black; */
+            text-align: center;
+        }
+
+        .main_content {
+            /* border: 1px solid black; */
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 600px;
+            padding-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .card1 {
+            border: 3px solid rgb(232, 232, 232);
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            height: 370px;
+            width: 260px;
+            transition: margin 0.5s;
+            position: relative;
+            min-width: 260px;
+            background-color: white;
+        }
+
+        .card2 {
+            border: 3px solid rgb(102, 193, 84);
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            height: 430px;
+            width: 250px;
+            transition: margin 0.5s;
+            position: relative;
+            min-width: 250px;
+            background-color: white;
+        }
+
+        .card3 {
+            border: 3px solid rgb(232, 232, 232);
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            height: 370px;
+            min-width: 260px;
+            transition: margin 0.5s;
+            position: relative;
+            background-color: white;
+        }
+
+        .left {
+            text-align: left;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: rgb(232, 232, 232);
+            /* Green */
+            border: none;
+            border-radius: 7px;
+            color: rgb(102, 193, 84);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(102, 193, 84);
+            color: white;
+        }
+
+        .card2 button {
+            background-color: rgb(102, 193, 84);
+            color: white;
+        }
+
+        h1 {
+            color: rgb(59, 54, 99);
+        }
+
+        p {
+            line-height: 250%;
+        }
+
+        .div1 {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(248, 249, 250);
+        }
+
+        .div2 {
+            /* border: 1px solid black; */
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+
+
+        .card2:hover {
+            margin-top: -40px;
+        }
+
+        .card1:hover {
+            margin-top: -25px;
+        }
+
+        .card3:hover {
+            margin-top: -25px;
+        }
+
+        .link:hover {
+            color: rgb(102, 193, 84);
+        }
+
+        .link {
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+        }
+
+        .offer {
+            border: 1px solid rgb(232, 232, 232);
+            border-radius: 20px;
+            width: 130px;
+            height: 25px;
+            font-size: 12px;
+            z-index: +999;
+            position: absolute;
+            top: 100px;
+            left: 80px;
+            font-weight: 1000;
+            color: rgb(102, 193, 84);
+            line-height: 25px;
+            background-color: rgb(248, 249, 250);
+        }
+
+        hr {
+            z-index: -1;
+            color: rgb(232, 232, 232);
+        }
+
+        .temp {
+            position: relative;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .left p {
+            font-size: 16px;
+            word-spacing: 1px;
+        }
+
+        .style-div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid;
+            border-width: 30px 30px 30px 30px;
+            border-color: rgb(102, 193, 84);
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+
+        }
+
+        .font-awesome {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    
+        <div class="div1">
+            <div class="heading">
+                <h1>Limited pricing plans</h1>
+            </div>
+            <div class="side-menu">
+                <p><i class="fa-solid fa-angles-right"></i></p>
+                <hr />
+                <p> <i class="fa-solid fa-arrow-left"></i><br />Back</p>
+                <p> <i class="fa-solid fa-download"></i>Download</p>
+                <p> <i class="fa-solid fa-cart-shopping"></i>
+                    <br />Buy
+                </p>
+            </div>
+            <div class="main_content">
+                <div class="card1">
+                    <h1>Limited</h1>
+                    <p><b>$2</b> / month per user</p><br />
+                    <div class="offer"> Available for a month</div>
+                    <hr/>
+                    <br />
+                    <div class="left" style="color: rgb(130, 133, 143);">
+                        <p><span style="color: rgb(102, 193, 84);"><strong>> </strong></span> <b>8</b> Team members</p>
+                        <p><span style="color: rgb(102, 193, 84);"><strong>> </strong></span> <b>6</b> Team playlists
+                        </p>
+                        <p><span style="color: rgb(102, 193, 84);"><strong>> </strong></span> <b>15</b> Public playlists
+                        </p>
+                    </div>
+                    <button><strong>Get started</strong></button>
+                </div>
+                <div class="card2">
+                    <div class="style-div">
+
+                    </div>
+                    <i class="far fa-star"
+                        style="color: white !important; position: absolute; top: 8px; left: 8px;"></i>
+                    <h1>Brilliant</h1>
+                    <p><b>$5</b> / month per user</p><br />
+                    <div class="offer"> Free 30 days trial</div>
+                    <hr />
+                    <br />
+                    <div class="left" style="color: rgb(130, 133, 143);">
+                        <p><span style="color: rgb(102, 193, 84);"><strong>></strong></span> <b> Unlimited</b> Team
+                            members
+                        </p>
+                        <p><span style="color: rgb(102, 193, 84);"><strong>></strong></span> <b> Unlimited</b> Team
+                            playlists
+                        </p>
+                        <p><span style="color: rgb(102, 193, 84);"><strong>></strong></span> <b> Unlimited</b> Public
+                            playlists</p>
+                        <p><span style="color: rgb(102, 193, 84);"><strong>></strong></span> Send files upto 100mb</p>
+                        <p><span style="color: rgb(102, 193, 84);"><strong>></strong></span> Team analytics</p>
+                    </div>
+                    <br />
+                    <button><strong>Get started</strong></button>
+                </div>
+                <div class="card3">
+                    <h1>Basic</h1>
+                    <p><b>$0</b> / month per user</p><br />
+                    <div class="offer"> Totally free</div>
+                    <hr />
+                    <br />
+                    <div class="left" style="color: rgb(130, 133, 143);">
+                        <p><span style="color: rgb(102, 193, 84);"><strong>></strong></span> <b>5</b> Team members</p>
+                        <p><span style="color: rgb(102, 193, 84);"><strong>></strong></span> <b>3</b> Team playlists</p>
+                        <p><span style="color: rgb(102, 193, 84);"><strong>></strong></span> <b>0</b> Public playlists
+                        </p>
+                    </div>
+                    <button><strong>Get started</strong></button>
+                </div>
+
+            </div>
+
+            <br /><br /><br />
+            <p style="text-align: center;">© 2020 Limited pricing plans. All rights reserved | Design by
+                <a href="http://w3layouts.com/" target="_blank" class="link">W3layouts</a>
+            </p>
+        </div>
+
+
+        <div class="temp">
+            <div class="caption">
+                <span style="font-size: 9px"> Powered By </span><span
+                    style="font-size: 11px; font-weight: bolder;">VDO<span
+                        style="font-size: 15px; color: darkred;">.</span>AI</span>
+            </div>
+            <div class="div2">
+                <iframe width="700" height="380" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=0&mute=1">
+                </iframe>
+            </div>
+        </div>
+
+</body>
+
+</html>
